@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+    <div id="templatemo_content">
+        <% include ../partials/left %>
+        <div id="templatemo_content_right">
+            <h1 style="">DANH SÁCH CÁC LOẠI SÁCH</h1>
+            <% sach.forEach(s => { %>
+        	<div class="templatemo_product_box">
+            	<h1> <%= s.tensach %> </h1>
+   	      <img width="100" height="150" src="./sach/<%= s.anhbia %>" alt="image" />
+                <div class="product_info">
+                	<p><%= s.mota %></p>
+                  <h3> <%= s.gia %> VNĐ </h3>
+                    <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div>
+                    <div class="detail_button"><a href="/chitietsach/<%= s.id %>">Detail</a></div>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+            </div>
+            <% }) %>
+            <div class="cleaner_with_width">&nbsp;</div>
+            <br></br>
+        </div> <!-- end of content right -->
+    	<div class="cleaner_with_height">&nbsp;</div>
+    </div> <!-- end of content -->
+    <% include ../partials/footer %>

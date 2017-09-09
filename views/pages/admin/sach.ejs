@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../../partials/header %>
+    </head>
+    <body>
+        <h1>QUẢN LÝ CHỦ ĐỀ SÁCH</h1>
+        <div class="a">
+            <h3><a href="/themsach">Thêm mới</a></h3>
+            <table>
+            <tr>
+                <td>MÃ SÁCH</td>
+                <td>TÊN SÁCH</td>
+                <td>GIÁ</td>
+                <td>ẢNH BÌA</td>
+                <td>MÔ TẢ</td>
+                <td>CHỦ ĐỀ</td>
+                <td>NHÀ XUẤT BẢN</td>
+                <td></td>
+            </tr>
+            <% sach.forEach(s => { %>
+            <tr>
+                <td> <%= s.id %> </td>
+                <td> <%= s.tensach %> </td>
+                <td> <%= s.gia %> </td>
+                <td> 
+                    <img src="../sach/<%= s.anhbia %>" alt="anhbia"/>
+                </td>
+                <td> <%= s.mota %> </td>
+                <td> <%= s.tenchude %> </td>
+                <td> <%= s.tennhaxuatban %> </td>
+                <td>
+                    <a href="/xoasach/<%= s.id %>" onclick="return confirm('Are you sure?')">Remove</a> |
+                    <a href="/suasach/<%= s.id %>">Update</a>
+                </td>
+            </tr>
+            <% }) %>
+            </table>
+        </div>
+    </body>
+    <footer>
+            <% include ../../partials/footer %>
+    </footer>
+</html>
+<style>
+    h1 {
+        text-align: center;
+        margin-left: 110px;
+    }
+    h3 {
+        margin-left: 15px;
+    }
+    .a {
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin-left: 15px;
+        font-size: 12px;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+        width: 705px;
+        height: 35px;
+    }
+    img {
+        align-items: center;    
+        width: 80px;
+        padding: 10px;
+    }
+</style>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../../partials/header %>
+        <script src="../../../public/jquery.js"></script>
+    </head>
+    <body>
+        <h1>THÊM CHỦ ĐỀ SÁCH</h1>
+        <div class="a">
+            <form action="/themsach" method="POST" enctype="multipart/form-data">
+                <input type="text" name="tensach" placeholder="Tên sách">
+                <br><br>            
+                <input type="text" name="gia" placeholder="Giá">
+                <br><br>            
+                <input type="file" name="anhbia" placeholder="Ảnh bìa">
+                <br><br>
+                <input type="text" name="mota" placeholder="Mô tả">
+                <br><br>
+                <div>
+                    <select id="mySelect"  name="machude">
+                        <option value="void">Chủ đề</option>
+                        <% chude.forEach(cd => { %>
+                        <option value="<%= cd.machude %>"><%= cd.tenchude %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <select id="mySelect" name="manhaxuatban">
+                        <option value="void">Nhà xuất bản</option>
+                        <% nhaxuatban.forEach(nxb => { %>
+                        <option value="<%= nxb.manhaxuatban %>"><%= nxb.tennhaxuatban %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <br><br>
+            <input type="submit" value="Thêm sách">
+            </form>
+        </div>
+    </body>
+    <footer>
+            <% include ../../partials/footer %>
+    </footer>
+</html>
+<style>
+    h1 {
+        text-align: center;
+    }
+    .a {
+        margin: auto;
+        width: 32%;
+        padding: 10px;
+    }
+</style>
+
+<script>
+function answers()
+{
+  var selectedanswer=document.getElementById("mySelect").selectedIndex;
+}
+</script>

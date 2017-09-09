@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../../partials/header %>
+    </head>
+    <body>
+        <h1>QUẢN LÝ CHỦ ĐỀ SÁCH</h1>
+        <div class="a">
+            <h3><a href="/themchude">Thêm mới</a></h3>
+            <table>
+            <tr>
+                <td>MÃ CHỦ ĐỀ</td>
+                <td>TÊN CHỦ ĐỀ</td>
+                <td></td>
+            </tr>
+            <% chude.forEach(cd => { %>
+            <tr>
+                <td> <%= cd.machude %></td>
+                <td> <%= cd.tenchude %></td>
+                <td>
+                    <a href="/xoachude/<%= cd.machude %>" onclick="return confirm('Are you sure?')">Remove</a> |
+                    <a href="/suachude/<%= cd.machude %>">Update</a>
+                </td>
+            </tr>
+            <% }) %>
+            </table>
+        </div>
+    </body>
+    <footer>
+            <% include ../../partials/footer %>
+    </footer>
+</html>
+<style>
+    h1 {
+        text-align: center;
+        margin-left: 110px;
+    }
+    h3 {
+        margin-left: 15px;
+    }
+    .a {
+        margin: auto;
+        width: 32%;
+        padding: 10px;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin-left: 15px;
+        font-size: 12px;
+    }
+
+    table, td, th {
+        border: 1px solid black;
+        width: 390px;
+        height: 35px;
+    }
+</style>

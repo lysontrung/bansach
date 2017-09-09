@@ -1,0 +1,20 @@
+<div id="templatemo_content_left">
+        	<div class="templatemo_content_left_section">
+                <h1>Chủ đề sách</h1>
+                <% chude.forEach(cd => { %>
+                <ul>
+                   <a href="#"> <%= cd.tenchude %> </a>
+            	</ul>          
+                <% }) %>
+            </div>
+
+            <div class="templatemo_content_left_section">
+                <h1>Nhà xuất bản sách</h1>
+                <% nhaxuatban.forEach(nxb => { %>
+                <ul>
+                   <a href="#"> <%= nxb.tennhaxuatban %> </a> 
+            	</ul>          
+                <% }) %>
+            </div>
+</div> <!-- end of content left -->
+        

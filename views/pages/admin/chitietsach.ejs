@@ -1,0 +1,26 @@
+<% include ../../partials/header %>
+    <div id="templatemo_content">
+        <% include ../../partials/left %>
+        <div id="templatemo_content_right">
+            <h1> <%= sach.tensach %> </h1>
+            <div class="image_panel"><img src="../sach/<%= sach.anhbia %>" alt="CSS Template" width="180" height="150" /></div>
+                <div class="a">
+                    <h2 style="padding-left:20px" >Share is the best !!!</h2>
+                    <ul>
+                        <li>Chủ đề: <a href="#"> <%= sach.tenchude %> </a></li>
+                        <li>Trực thuộc nhà xuất bản: <a href="#"> <%= sach.tennhaxuatban %> </a></li>
+                        <li>Giá: <%= sach.gia %> </li>
+                    </ul>
+                    <p style="padding-left:20px" > <%= sach.mota %> </p>
+                </div>
+		<div class="cleaner_with_height">&nbsp;</div>
+        </div> <!-- end of content right -->
+    	<div class="cleaner_with_height">&nbsp;</div>
+    </div> <!-- end of content -->
+<% include ../../partials/footer %>
+
+<style>
+    .a {
+        padding-left: 190px ;
+    }
+</style>

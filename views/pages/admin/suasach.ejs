@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../../partials/header %>
+        <script src="../../../public/jquery.js"></script>
+    </head>
+    <body>
+        <h1>THÊM CHỦ ĐỀ SÁCH</h1>
+        <div class="a">
+            <form action="/suasach/<%= sach.id %>" method="POST">
+                <h3><%= sach.tensach %></h3>
+                <input type="text" name="gia"  value="<%= sach.gia %>">
+                <br><br>        
+                <input type="text" name="mota"  value="<%= sach.mota %>">
+                <br><br>
+            <input type="submit" value="Sửa sách">
+            </form>
+        </div>
+    </body>
+    <footer>
+            <% include ../../partials/footer %>
+    </footer>
+</html>
+<style>
+    h1 {
+        text-align: center;
+    }
+    .a {
+        margin: auto;
+        width: 32%;
+        padding: 10px;
+    }
+</style>
+
+<script>
+function answers()
+{
+  var selectedanswer=document.getElementById("mySelect").selectedIndex;
+}
+</script>

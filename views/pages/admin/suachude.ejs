@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../../partials/header %>
+    </head>
+    <body>
+        <h1>SỬA CHỦ ĐỀ SÁCH</h1>
+        <div class="a">
+            <form action="/suachude/<%= chude.machude %>" method="POST">
+            <input type="text" name="txtTen" placeholder="tên chủ đề" value="<%= chude.tenchude %>">
+            <br><br>            
+            <input type="submit" value="Sửa chủ đề">
+            </form>
+        </div>
+    </body>
+    <footer>
+            <% include ../../partials/footer %>
+    </footer>
+</html>
+<style>
+    h1 {
+        text-align: center;
+    }
+    .a {
+        margin: auto;
+        width: 32%;
+        padding: 10px;
+    }
+</style>

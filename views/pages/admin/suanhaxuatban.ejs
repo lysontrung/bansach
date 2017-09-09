@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../../partials/header %>
+    </head>
+    <body>
+        <h1>SỬA NHÀ XUẤT BẢN</h1>
+        <div class="a">
+            <form action="/suanhaxuatban/<%= nhaxuatban.manhaxuatban %>" method="POST">
+            <input type="text" name="txtTen" placeholder="tên nhà xuất bản" value="<%= nhaxuatban.tennhaxuatban %>">
+            <br><br>            
+            <input type="submit" value="Sửa nhà xuất bản">
+            </form>
+        </div>
+    </body>
+    <footer>
+            <% include ../../partials/footer %>
+    </footer>
+</html>
+<style>
+    h1 {
+        text-align: center;
+    }
+    .a {
+        margin: auto;
+        width: 32%;
+        padding: 10px;
+    }
+</style>
